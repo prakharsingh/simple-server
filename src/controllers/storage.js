@@ -19,9 +19,11 @@ module.exports = [
       handler: async (request) => {
         try {
           const s3Params = {
-            Bucket: Config.aws.s3.bucket,
-            Key: request.query.key,
-            ACL: request.params.acl,
+            bucket: Config.aws.s3.bucket,
+            key: decodeURIComponent(request.query.key),
+            acl: request.params.acl,
+            maxSize: 10,
+            expireInMin: 1,
           };
 
           const data = await SignedUrl.uploadUrl(s3Params);
