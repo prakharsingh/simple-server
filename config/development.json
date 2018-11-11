@@ -6,9 +6,7 @@
     "url": "http://localhost:8080"
   },
   "aws" : {
-    "accessKey": "",
-    "accessSecret": "",
-
+    "accessKey": "AKIAIZGWRIHFP6TG5EEQ",
     "s3"    : {
       "bucket": "assets-prakhar",
       "region": "us-east-1",
