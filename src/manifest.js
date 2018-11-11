@@ -6,7 +6,7 @@ const Config = require('config');
 module.exports = {
   server: {
     host: Config.app.host,
-    port: Config.app.port,
+    port: process.env.PORT || Config.app.port,
     routes: {
       cors: {
         origin: ["*"]
